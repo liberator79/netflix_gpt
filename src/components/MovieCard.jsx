@@ -13,7 +13,7 @@ const MovieCard = ({ poster_path, movie_name }) => {
       <img className="w-48" src={"/movie_posters/" + poster_path} />
       {
         show &&
-        <div className="absolute bg-black w-[87%] rounded-lg inset-0 opacity-80 h-[50%] top-36">
+        <div className="absolute bg-black w-[87%] rounded-t-lg -translate-y-28 opacity-80">
           <div className="text-white font-bold p-2">
             {movie_name}
           </div>

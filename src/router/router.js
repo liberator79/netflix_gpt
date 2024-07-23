@@ -6,7 +6,9 @@ import Home from '../pages/Home';
 import Signin from "../pages/Signin"
 import Signup from "../pages/Signup"
 import GPTSearch from '../pages/GPTSearch';
-
+import NowPlaying from "../pages/NowPlaying"
+import TopRated from '../pages/TopRated';
+import Popular from '../pages/Popular';
 const appRouter = createBrowserRouter([
 
 
@@ -32,7 +34,19 @@ const appRouter = createBrowserRouter([
             {
                 path: PATHS.GPTSEARCH,
                 element: <Parent type = "private"><GPTSearch /></Parent>
-            }
+            },
+            {
+                path : PATHS.PLAYING_NOW,
+                element : <Parent type = "private"><NowPlaying/></Parent>
+            },
+            {
+                path : PATHS.TOPRATED,
+                element : <Parent type = "private" ><TopRated/></Parent>
+            },
+            {
+                path : PATHS.POPULAR,
+                element : <Parent type = "private" ><Popular/></Parent>
+            },
         ],
     },
     {

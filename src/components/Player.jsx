@@ -26,7 +26,7 @@ const Player = ({ data }) => {
               More Info
             </button>
           </div>
-          <div className='text-2xl text-white p-2' onClick = {muteTogler}>
+          <div className='text-2xl text-white font-bold  p-2 cursor-pointer bg-gray-300  bg-opacity-30 rounded-md' onClick = {muteTogler}>
             {isMuted?<FaVolumeMute />:<VscUnmute/>}
           </div>
         </div>

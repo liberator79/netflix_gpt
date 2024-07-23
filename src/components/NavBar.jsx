@@ -9,13 +9,13 @@ const NavBar = () => {
                 <Link to={PATHS.BROWSE}><img src={LOGO} alt="logo" className='w-[100%]' /></Link>
             </div>
             <div className=''>
-                Popular
+                <Link to = {PATHS.POPULAR}>Popular</Link>
             </div>
             <div className=''>
-                Top Rated
+                <Link to = {PATHS.TOPRATED}>Top Rated</Link>
             </div>
             <div>
-                Playing Now
+                <Link to = {PATHS.PLAYING_NOW}>Playing Now</Link>
             </div>
             <div className='grid col-span-7 justify-end pr-2'>
                 <Link to = {PATHS.GPTSEARCH}>GPTSearch</Link>
