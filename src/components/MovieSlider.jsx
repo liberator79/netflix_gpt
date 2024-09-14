@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { cn } from "./lib/utils";  // Assuming this utility exists in your project
+import { cn } from "./lib/utils"; 
 
 export const Card = React.memo(({ card, index, hovered, setHovered }) => (
 
@@ -11,9 +11,9 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
       hovered !== null && hovered !== index && "blur-sm scale-[0.98]"
     )}>
     <img
-      src={`/movie_posters/${card.poster_path}`}  // Ensure data has 'src' for images
+      src={`/movie_posters/${card.poster_path}`}  
 
-      alt={card.title} // Ensure data has 'title'
+      alt={card.title}
       className="object-cover absolute inset-0" />
     <div
       className={cn(
@@ -23,7 +23,9 @@ export const Card = React.memo(({ card, index, hovered, setHovered }) => (
       <div className="text-xl w-[100%] font-bold bg-clip-text text-transparent text-white">
         <div className="felx justify-center items-center w-[100%]  flex-col gap-2 rounded-md bg-opacity-75">
           <div className="bg-opacity-80 ">{card.title}</div>
-          <div className=""><button className="p-2 text-sm bg-opacity-70 bg-white text-black rounded-md">Play Now</button></div>
+          <button className='rounded-md p-2 px-3 bg-gray-300 bg-opacity-40  text-white text-transparent font-semibold'>
+            Play
+          </button>
         </div>
       </div>
     </div>
@@ -36,6 +38,7 @@ const MovieSlider = ({ data }) => {
   const [hovered, setHovered] = useState(null);
 
   if (!data) return null;
+  console.log(data);
   return (
     <div className="p-2">
       {
@@ -46,7 +49,7 @@ const MovieSlider = ({ data }) => {
               return (
                 <swiper-slide key={card.id}>
                   <div className="m-2">
-                    <Card  // Ensure each card has a unique 'title'
+                    <Card  
                       card={card}
                       index={index}
                       hovered={hovered}

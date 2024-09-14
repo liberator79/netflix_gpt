@@ -9,6 +9,7 @@ import GPTSearch from '../pages/GPTSearch';
 import NowPlaying from "../pages/NowPlaying"
 import TopRated from '../pages/TopRated';
 import Popular from '../pages/Popular';
+import Movie from '../pages/Movie';
 const appRouter = createBrowserRouter([
 
 
@@ -47,6 +48,10 @@ const appRouter = createBrowserRouter([
                 path : PATHS.POPULAR,
                 element : <Parent type = "private" ><Popular/></Parent>
             },
+            {
+                path : PATHS.SINGLE_MOVIE,
+                element : <Parent type = "private"><Movie/></Parent>
+            }
         ],
     },
     {

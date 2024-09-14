@@ -1,7 +1,8 @@
 import React from 'react'
-import { Link , useLocation } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 import LOGO from '../static/images/Netflix_Logo_RGB.png'
 import PATHS from "../router/routes"
+import {logout} from "../validate/aunthenticate"
 const NavBar = () => {
     const location = useLocation();
     return (
@@ -10,16 +11,20 @@ const NavBar = () => {
                 <Link to={PATHS.BROWSE}><img src={LOGO} alt="logo" className='w-[100%]' /></Link>
             </div>
             <div className=''>
-                <Link to = {PATHS.POPULAR} className={location.pathname === PATHS.POPULAR ? 'border-b-4 pb-1 border-white' : ''} >Popular</Link>
+                <Link to={PATHS.POPULAR} className={location.pathname === PATHS.POPULAR ? 'border-b-4 pb-1 border-white' : ''} >Popular</Link>
             </div>
             <div className=''>
-                <Link to = {PATHS.TOPRATED} className={location.pathname === PATHS.TOPRATED ? 'border-b-4 pb-1 border-white' : ''} >Top Rated</Link>
+                <Link to={PATHS.TOPRATED} className={location.pathname === PATHS.TOPRATED ? 'border-b-4 pb-1 border-white' : ''} >Top Rated</Link>
             </div>
             <div>
-                <Link to = {PATHS.PLAYING_NOW} className={location.pathname === PATHS.PLAYING_NOW ? 'border-b-4 pb-1 border-white' : ''} >Playing Now</Link>
+                <Link to={PATHS.PLAYING_NOW} className={location.pathname === PATHS.PLAYING_NOW ? 'border-b-4 pb-1 border-white' : ''} >Playing Now</Link>
             </div>
-            <div className='grid col-span-7 justify-end pr-2'>
-                <Link to = {PATHS.GPTSEARCH} className={location.pathname === PATHS.GPTSEARCH ? 'border-b-4 pb-1 border-white' : ''} >GPTSearch</Link>
+            <div>
+                <Link to={PATHS.GPTSEARCH} className={location.pathname === PATHS.GPTSEARCH ? 'border-b-4 pb-1 border-white' : ''} >GPTSearch</Link>
+
+            </div>
+            <div className='grid col-span-6 justify-end pr-2'>
+                <button className='p-2 bg-[E50914] rounded-md' onClick={() => {logout()}}>Signout</button>
             </div>
         </div>
     )

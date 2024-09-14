@@ -7,6 +7,7 @@ const PATHS = {
     POPULAR : "/popular",
     TOPRATED : "/toprated",
     PLAYING_NOW : "/playingnow",
+    SINGLE_MOVIE : `/movie/:id`
 }
 
 export default PATHS

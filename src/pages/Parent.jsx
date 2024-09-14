@@ -11,14 +11,13 @@ const Parent = ({ children, type }) => {
     const isLogged = useSelector((store) => store.user);
     const navigate = useNavigate();
     useEffect(() => {
-        onAuthStateChanged(auth, async (user) => {
-            
+        onAuthStateChanged(auth, async (user) => {      
             if (user) {
                 if(type === "public")navigate(PATHS.BROWSE)
                 dispatch(
                     addUser({
                         uid: user.uid,
-                        emial: user.email,
+                        email: user.email,
                         displayName: user.displayName
                     })
                 )
