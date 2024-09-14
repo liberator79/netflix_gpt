@@ -6,9 +6,9 @@ const NowPlaying = () => {
     const data = useSelector(store => store.movies.nowPlayingMovies);
     return (
         <div>
-            
 
-        <div className='relative'>
+
+            <div className='relative'>
                 <NavBar />
             </div>
             {
