@@ -7,22 +7,14 @@ const Popular = () => {
     console.log(data)
     return (
         <div>
-            <div className='absolute w-[100%] h-[100vh]'>
-                <img
-
-                    alt="bg"
-                    className='h-[100vh] w-[100%]'
-                    src={bg_image_url}
-                />
-            </div>
 
             <div className='relative'>
                 <NavBar />
             </div>
-                {
-                    data &&
-                    <MovieSlider data = {data} slider_title="Playing Now"/>
-                }
+            {
+                data &&
+                <MovieSlider data={data} slider_title="Playing Now" />
+            }
 
         </div>
     )

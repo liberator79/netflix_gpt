@@ -6,13 +6,6 @@ const Signin = () => {
   return (
     <div>
       
-      <div className='absolute w-[100%] h-[100vh]'>
-        <img
-          className='h-[100vh] w-[100%]'
-          alt="bg"
-          src={bg_image_url}
-        />
-      </div>
       <div className='relative bg-gradient-to-b from-black'>
         <DefaultNavBar/>
       </div>
